@@ -8,7 +8,7 @@
 
 #### 当前读与快照读
 + 快照读：普通select
-+ 当前读：select lock in share mode；select for update；insert；update；delete；
++ 当前读：select ... lock in share mode；select ... for update；insert；update；delete；
 
 #### 隔离级别（当前读）
 + READ UNCOMMITTED
@@ -34,6 +34,7 @@
 + 死锁检测和死锁超时机制
 + Innodb将持有最少行及排他锁的事务回滚
 
-#### 
-
+#### 事务日志
++ 存储引擎在修改表的数据时，先把修改行为记录到持久在硬盘上的事务日志中，以减小随机IO
++ 事务日志持久后，修改的数据在后台慢慢的刷回磁盘
   
