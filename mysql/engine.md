@@ -34,7 +34,7 @@
 + 聚簇索引
 + frm(表)，ibd(数据+索引)（mysql 8.0 已经没有frm了，和入了ibd）
 + $ sudo ls -al /usr/local/mysql/data/<database>
-+ $ sudo xxd /usr/local/mysql/data/<database>/<table>.ibd
++ $ sudo xxd /usr/local/mysql/data/<database>/<table_name.ibd>
 
 #### 非聚簇索引（数据与索引一起存储）
 + 聚簇索引默认选择主键，如果没有主键选择唯一非空索引，都没有的话，再生成GEN_CLUST_INDEX作为聚簇索引
@@ -49,6 +49,7 @@
   为了尽量避免这种情况，InnoDB会尽量让逻辑上相连的页在物理内存上也连续（顺序IO）。
   当表中的数据量很大时，就以更大的 区（extent）为单位为表分配存储空间，InnoDB 规定连续的 64 个页是一个区(1M)。
   
-[参考](https://junebao.top/#/detail/94)
+[参考](https://junebao.top/#/detail/94)  
+[参考](https://blog.nowcoder.net/n/15c92020835d4efcb4b18d61ddfd3399)  
 
 ![innodb](picture/innodb.svg)
