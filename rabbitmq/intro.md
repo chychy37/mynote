@@ -20,6 +20,21 @@
 ## 消息
 + 消息体：payload
 + 标签：交换器名称，路由键 等（路由到队列后删除）
++ props:
+  + contentType
+  + contentEncoding
+  + headers
+  + deliveryMode
+  + priority
+  + correlationId
+  + replyTo
+  + expiration
+  + messageId
+  + timestamp
+  + type
+  + userId
+  + appId
+  + clusterId
 
 
 ## 队列
