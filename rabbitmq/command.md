@@ -55,14 +55,14 @@
 | ---                | ---       | ---                   | ---                    |
 | Basic.Qos          | 	❌       | channel.basicQos      | 	设置未被确认消费的个数   | 
 | Basic.Qos-Ok		 |
-| Basic.Consume	     | ❌	     | channel.basicConsume	 | 消费消息（推）           | 
+| Basic.Consume *	 | ❌	     | channel.basicConsume	 | 消费消息（推）           | 
 | Basic.Consume-Ok   |
 | Basic.Cancel       | 	❌	     | channel.basicCancel   | 取消                   | 
 | Basic.Cancel-Ok	 |
-| Basic.Publish	     | ✅	     | channel.basicPublish  | 发送消息                | 
+| Basic.Publish *    | ✅	     | channel.basicPublish  | 发送消息                | 
 | Basic.Return	     | ✅        | 	🈚️	                 | 未能成功路由的消息返回    | 
 | Basic.Deliver	     | ✅	     | 🈚️	                 | broker推送消息          | 
-| Basic.Get	         | ❌	     | channel.basicGet      | 	消费消息（拉）          | 
+| Basic.Get *	     | ❌	     | channel.basicGet      | 	消费消息（拉）          | 
 | Basic.Get-Ok	     | ✅		
 | Basic.Ack	         | ❌	     | channel.basicAck      | 	确认                   | 
 | Basic.Reject	     | ❌	     | channel.basicReject	 | 拒绝（单条）             | 
