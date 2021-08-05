@@ -5,6 +5,7 @@
 + 易扩展
 + 高可用
 
+
 ## 作用
 + 解偶
 + 冗余
@@ -14,6 +15,7 @@
 + 顺序保证
 + 缓冲
 + 异步通信
+
 
 ## 消息
 + 消息体：payload
@@ -57,6 +59,7 @@
 3. 接受消息，处理
 4. ack
 5. 关闭channel，关闭connection
+
 
 ## connection和channel
 + channel复用connection的tcp连接，节约资源
