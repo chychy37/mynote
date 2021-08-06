@@ -35,6 +35,8 @@
   + userId
   + appId
   + clusterId
++ mandatory: ture，消息无法到达queue时，Basic.Return; false，消息直接丢弃或发送到备份交换机
++ immediate: 已废弃
 
 
 ## 队列
@@ -79,7 +81,7 @@
 + durable: 是否持久化
 + autoDelete: 是否自动删除（至少有一个队列或交换器与这个交换器绑定，之后所有与这个交换器绑定的队列或交换器与此解绑 -> 自动删除）
 + internal: 是否是内置的（客户端无法直接发送消息到这个交换器，只能通过其他交换器路由到此交换器）
-+ arguments: alternate-exchange
++ arguments: alternate-exchange, 配置备份交换机，在消息无法路由时，发送给备份交换机
 
 ## 运转流程
 ### 生产者
